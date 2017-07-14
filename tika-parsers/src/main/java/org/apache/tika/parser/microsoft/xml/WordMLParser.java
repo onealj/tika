@@ -61,8 +61,7 @@ public class WordMLParser extends AbstractXML2003Parser {
 
     private static final MediaType MEDIA_TYPE = MediaType.application("vnd.ms-wordml");
     private static final Set<MediaType> SUPPORTED_TYPES =
-            Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
-                    MEDIA_TYPE)));
+            Collections.singleton(MEDIA_TYPE); //immutable
 
     static {
         WORDML_TO_XHTML.put(P, P);
